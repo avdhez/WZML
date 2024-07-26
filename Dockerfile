@@ -4,6 +4,12 @@ FROM python:3.9-slim
 # Set the working directory
 WORKDIR /usr/src/app
 
+# Update package lists and install git
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # Ensure permissions are set correctly
 RUN chmod 777 /usr/src/app
 
