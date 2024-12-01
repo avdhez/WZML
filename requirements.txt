@@ -1,3 +1,4 @@
+python-dotenv
 aiohttp
 aiofiles
 aioshutil
